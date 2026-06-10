@@ -44,47 +44,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ========================================
-       CONTACT FORM — SUBMISSÃO SIMPLES
-       (deixa o FormSubmit cuidar do envio)
-    ======================================== */
-    const contactForm = document.getElementById('contact-form');
-    const submitBtn = document.getElementById('submit-btn');
-    const btnText = document.getElementById('btn-text');
-    const btnLoading = document.getElementById('btn-loading');
+   CONTACT FORM — SUBMISSÃO SIMPLES
+   (deixa o FormSubmit cuidar do envio)
+======================================== */
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const btnText = document.getElementById('btn-text');
+const btnLoading = document.getElementById('btn-loading');
+const formSuccess = document.getElementById('form-success');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const subject = document.getElementById('subject').value.trim();
-            const message = document.getElementById('message').value.trim();
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-            // Validação básica do lado do cliente
-            if (!name || !email || !subject || !message) {
-                // Se a validação falhar, o navegador já impede o envio
-                // e mostra a mensagem de campo obrigatório.
-                // Não precisamos de e.preventDefault() aqui, pois o navegador já faz isso.
-                return;
-            }
-
-            // Validação de e-mail mais robusta (opcional, o navegador já faz um básico)
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                e.preventDefault(); // Impede o envio se o e-mail for inválido
-                alert('Por favor, insira um endereço de e-mail válido.');
-                return;
-            }
-
-            // Mostra loading no botão, mas permite que o formulário submeta
-            if (submitBtn && btnText && btnLoading) {
-                submitBtn.disabled = true; // Desabilita o botão para evitar múltiplos cliques
-                btnText.style.display = 'none';
-                btnLoading.style.display = 'inline-flex'; // Mostra o spinner
-            }
-            // Não chamamos e.preventDefault() aqui se a validação passar,
-            // pois queremos que o formulário seja enviado para o Formsubmit.io
-        });
+    if (!name || !email || !subject || !message) {
+      e.preventDefault();
+      return;
     }
 
+    // Mostra loading, mas deixa o form submeter normalmente
+    if (submitBtn && btnText && btnLoading) {
+      submitBtn.disabled = true;
+      btnText.style.display = 'none';
+      btnLoading.style.display = 'inline-flex';
+    }
+  });
+}
 
     // ---------------- BRASILEIRÃO ----------------
     const brasileiraoSection = document.querySelector('.brasileirao-section');
