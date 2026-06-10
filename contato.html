@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Arthur Alencar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="background-neon"></div>
+    <div class="background-effect"></div>
+
+    <header>
+        <nav>
+            <div class="logo">arthur.alencar</div>
+            <ul>
+                <li><a href="index.html">/home</a></li>
+                <li><a href="brasileirao.html">/brasileirao</a></li>
+                <li><a href="contato.html">/contato</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-sun"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card contact-section">
+            <h2 class="section-title">Contato</h2>
+            <p class="section-subtitle">Entre em contato para oportunidades, colaborações ou apenas um bom papo sobre tecnologia.</p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email: <a href="mailto:aahm@cesar.school">aahm@cesar.school</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn: <a href="https://www.linkedin.com/in/arthur-alencar-harten-de-moraes-485a293b0/" target="_blank">/arthur-alencar</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub: <a href="https://github.com/alencarzinho00" target="_blank">/alencarzinho00</a></span>
+                </div>
+            </div>
+
+            <!-- Formulário de Contato com Formsubmit.io -->
+            <!-- ATENÇÃO: Substitua SEU_EMAIL_AQUI pelo seu e-mail real! -->
+            <form action="https://formsubmit.io/send/aahm@cesar.school" method="POST" class="contact-form">
+                <!-- Campos ocultos para Formsubmit -->
+                <input type="hidden" name="_subject" value="Novo Contato do Portfólio - Arthur Alencar">
+                <input type="hidden" name="_captcha" value="false"> <!-- Desativa o captcha para facilitar testes -->
+
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Arthur Alencar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

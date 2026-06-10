@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileirão - Arthur Alencar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="background-neon"></div>      <!-- efeito neon (opcional, mas fica bonito) -->
+    <div class="background-effect"></div>    <!-- grid de pontos animado -->
+
+    <header>
+        <nav>
+            <div class="logo">arthur.alencar</div>
+            <ul>
+                <li><a href="index.html">/home</a></li>
+                <li><a href="brasileirao.html">/brasileirao</a></li>
+                <li><a href="contato.html">/contato</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-sun"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card brasileirao-section">
+            <h2 class="section-title">Tabelas do Brasileirão</h2>
+            <p class="section-subtitle">Classificação atualizada das Séries A, B e C. Dados carregados de um arquivo JSON local.</p>
+
+            <div class="tabs">
+                <button class="tab-button active" data-series="A">Série A</button>
+                <button class="tab-button" data-series="B">Série B</button>
+                <button class="tab-button" data-series="C">Série C</button>
+            </div>
+
+            <div id="table-loader" class="table-loader">Carregando dados...</div>
+
+            <div id="tabela-serie-A" class="tabela-brasileirao active">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Time</th>
+                            <th>Pts</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>E</th>
+                            <th>D</th>
+                            <th>GP</th>
+                            <th>GC</th>
+                            <th>SG</th>
+                            <th>APV</th>
+                            <th>Últimos Jgs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dados da Série A serão inseridos aqui pelo JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="tabela-serie-B" class="tabela-brasileirao">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Time</th>
+                            <th>Pts</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>E</th>
+                            <th>D</th>
+                            <th>GP</th>
+                            <th>GC</th>
+                            <th>SG</th>
+                            <th>APV</th>
+                            <th>Últimos Jgs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dados da Série B serão inseridos aqui pelo JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="tabela-serie-C" class="tabela-brasileirao">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Time</th>
+                            <th>Pts</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>E</th>
+                            <th>D</th>
+                            <th>GP</th>
+                            <th>GC</th>
+                            <th>SG</th>
+                            <th>APV</th>
+                            <th>Últimos Jgs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dados da Série C serão inseridos aqui pelo JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Arthur Alencar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
