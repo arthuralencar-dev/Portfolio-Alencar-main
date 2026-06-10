@@ -48,31 +48,37 @@
                 </div>
             </div>
 
-            <!-- Formulário de Contato com Formsubmit.io -->
-            <!-- ATENÇÃO: Substitua SEU_EMAIL_AQUI pelo seu e-mail real! -->
-            <form action="https://formsubmit.io/send/aahm@cesar.school" method="POST" class="contact-form">
-                <!-- Campos ocultos para Formsubmit -->
-                <input type="hidden" name="_subject" value="Novo Contato do Portfólio - Arthur Alencar">
-                <input type="hidden" name="_captcha" value="false"> <!-- Desativa o captcha para facilitar testes -->
+            <form action="https://formsubmit.co/aahm@cesar.school"
+      method="POST"
+      class="contact-form"
+      id="contact-form">
 
-                <div class="form-group">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Assunto:</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensagem:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Enviar Mensagem</button>
-            </form>
+    <!-- Campos ocultos -->
+    <input type="hidden" name="_subject" value="Novo Contato do Portfólio - Arthur Alencar">
+    <input type="hidden" name="_captcha" value="false">
+
+    <div class="form-group">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="subject">Assunto:</label>
+        <input type="text" id="subject" name="subject" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit" id="submit-btn">
+        <span id="btn-text">Enviar Mensagem</span>
+        <span class="spinner" id="btn-loading"></span>
+    </button>
+</form>
         </section>
     </main>
 
